@@ -1,0 +1,76 @@
+{
+  "title": "Aerona Companion",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect your Grant integration",
+        "description": "Select the existing Grant integration. The companion reads its entities and does not connect to Modbus.",
+        "data": {
+          "source": "Grant integration"
+        }
+      },
+      "entities": {
+        "title": "Confirm readings and controls",
+        "description": "Suggested entities use the Grant entity registry. Confirm them and select any extra readings you want to record. Optional fields can be omitted.",
+        "data": {
+          "compressor": "Compressor running",
+          "frequency": "Compressor frequency",
+          "flow": "Flow temperature",
+          "return": "Return temperature",
+          "outdoor": "Outdoor temperature",
+          "power": "Reported electrical power",
+          "defrost": "Defrost active",
+          "curve_high": "2102 \u00b7 Cold-weather flow temperature",
+          "curve_low": "2103 \u00b7 Mild-weather flow temperature",
+          "outdoor_cold": "2104 \u00b7 Cold outdoor endpoint",
+          "outdoor_warm": "2105 \u00b7 Warm endpoint / cutoff",
+          "heating_demand": "Heating active",
+          "dhw_active": "DHW active",
+          "room_ufh": "UFH room temperature",
+          "room_radiators": "Radiator room temperature",
+          "meter_power": "Measured electrical power",
+          "meter_energy": "Measured electrical energy",
+          "tariff_price": "Electricity price",
+          "tariff_base": "Tariff base flow temperature",
+          "tariff_boost": "Cheap-rate uplift",
+          "tariff_trim": "Peak-rate trim"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Only one companion is supported. Use Configure to remap its readings.",
+      "grant_missing": "Add the Grant Aerona3 integration first."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Remap readings and controls",
+        "description": "Update missing or renamed entities after an integration upgrade. Logging settings are in the Aerona Companion sidebar.",
+        "data": {
+          "compressor": "Compressor running",
+          "frequency": "Compressor frequency",
+          "flow": "Flow temperature",
+          "return": "Return temperature",
+          "outdoor": "Outdoor temperature",
+          "power": "Reported electrical power",
+          "defrost": "Defrost active",
+          "curve_high": "2102 \u00b7 Cold-weather flow temperature",
+          "curve_low": "2103 \u00b7 Mild-weather flow temperature",
+          "outdoor_cold": "2104 \u00b7 Cold outdoor endpoint",
+          "outdoor_warm": "2105 \u00b7 Warm endpoint / cutoff",
+          "heating_demand": "Heating active",
+          "dhw_active": "DHW active",
+          "room_ufh": "UFH room temperature",
+          "room_radiators": "Radiator room temperature",
+          "meter_power": "Measured electrical power",
+          "meter_energy": "Measured electrical energy",
+          "tariff_price": "Electricity price",
+          "tariff_base": "Tariff base flow temperature",
+          "tariff_boost": "Cheap-rate uplift",
+          "tariff_trim": "Peak-rate trim"
+        }
+      }
+    }
+  }
+}

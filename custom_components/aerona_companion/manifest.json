@@ -1,0 +1,22 @@
+{
+  "domain": "aerona_companion",
+  "name": "Aerona Companion",
+  "version": "0.3.0",
+  "documentation": "https://github.com/Danwardo/aerona-companion",
+  "issue_tracker": "https://github.com/Danwardo/aerona-companion/issues",
+  "codeowners": [
+    "@Danwardo"
+  ],
+  "requirements": [],
+  "dependencies": [
+    "http",
+    "frontend",
+    "websocket_api"
+  ],
+  "after_dependencies": [
+    "grant_aerona3"
+  ],
+  "config_flow": true,
+  "iot_class": "local_push",
+  "integration_type": "service"
+}
