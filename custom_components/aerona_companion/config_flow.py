@@ -29,12 +29,12 @@ class CompanionFlow(config_entries.ConfigFlow,domain=DOMAIN):
         sources={e.entry_id:e.title for e in self.hass.config_entries.async_entries('grant_aerona3')}
         if not sources:return self.async_abort(reason='grant_missing')
         if user_input:
-            self.source=user_input['source'];return await self.async_step_entities()
+            self._grant_source=user_input['source'];return await self.async_step_entities()
         return self.async_show_form(step_id='user',data_schema=vol.Schema({vol.Required('source'):vol.In(sources)}))
     async def async_step_entities(self,user_input=None):
         if user_input is not None:
-            return self.async_create_entry(title='Aerona Companion',data={'source':self.source,'entities':user_input})
-        return self.async_show_form(step_id='entities',data_schema=schema(guesses(self.hass,self.source)))
+            return self.async_create_entry(title='Aerona Companion',data={'source':self._grant_source,'entities':user_input})
+        return self.async_show_form(step_id='entities',data_schema=schema(guesses(self.hass,self._grant_source)))
     @staticmethod
     @callback
     def async_get_options_flow(config_entry):return CompanionOptions()

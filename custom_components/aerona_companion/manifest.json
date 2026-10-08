@@ -1,7 +1,7 @@
 {
   "domain": "aerona_companion",
   "name": "Aerona Companion",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "documentation": "https://github.com/Danwardo/aerona-companion",
   "issue_tracker": "https://github.com/Danwardo/aerona-companion/issues",
   "codeowners": [
